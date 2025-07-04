@@ -1,0 +1,101 @@
+:root{
+    --cor-fundo: #620943 ;
+    --cor-principal: #e71fc6 ;
+    --cor-secundaria: #a6338f; 
+    --cor-destaque: #530734;
+    --cor-texto: #f3f8f9;
+
+}
+
+body {
+    background: linear-gradient(-45deg, #dd92c4, #f50589, #c0197b, #4b1141);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.caixa-principal{
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+h1{
+    color: var(--cor-destaque);
+}
+
+.caixa-perguntas {
+    width: 100%;
+    min-height: 120px;         
+    padding: 32px;           
+    margin-bottom: 24px;      
+    background: #9f1185;     
+    border-radius: 12px;      
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10); 
+    font-size: 1.3rem;        
+    display: flex;
+    align-items: center;      
+    justify-content: center; 
+    transition: box-shadow 0.3s; 
+    box-sizing: border-box;
+}
+
+.caixa-alternativas {
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    align-items: stretch;
+}
+
+.caixa-resultado {
+    display: none;
+    margin-top: 32px;
+    padding: 24px;
+    background: var(--cor-secundaria);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    transition: background 0.3s;
+}
+
+.texto-resultado {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: var(--cor-texto);
+    font-size: 1.0rem;      
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;    
+    line-height: 1.4;
+    text-transform: none;   
+    text-shadow: 0 1px 4px rgba(81,43,253,0.10);
+}
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
